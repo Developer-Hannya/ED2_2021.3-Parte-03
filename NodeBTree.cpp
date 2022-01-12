@@ -22,7 +22,7 @@ NodeBTree *NodeBTree::searchID(std::string id) {
 
     int i = 0;
 
-    while (i < this->nKeys && id != &keys[i]) {
+    while (i < this->nKeys && id != this->keys[i]) {
 
         i++;
 

@@ -9,9 +9,23 @@ BTree::BTree(int degree) {
 }
 
 BTree::~BTree() {
+
     delete this;
+
 }
 
-void BTree::traverse() {
+void BTree::callTraverse() {
+
+    if (root != NULL) {
+
+            root->traverse();
+
+    }
+
+}
+
+std::string BTree::searchID(std::string id) {
+
+
 
 }

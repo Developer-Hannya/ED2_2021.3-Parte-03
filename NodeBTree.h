@@ -1,8 +1,11 @@
 #ifndef NODEBTREE_H_INCLUDED
 #define NODEBTREE_H_INCLUDED
 
+#include <iostream>
 #include <vector>
 #include <string>
+
+using namespace std;
 
 class NodeBTree {
 
@@ -14,16 +17,21 @@ class NodeBTree {
 
         NodeBTree **children;
 
-        int n;
+        int nKeys;
 
         bool leaf;
 
     public:
 
-        std::string BTree:: searchID(std::string id);
+        NodeBTree(int degree, bool leafi);
+
+        NodeBTree *searchID(std::string id);
 
         void traverse();
-}
+
+        void insertId(std::string id);
+
+        void splitChild(int i, NodeBTree *y);
 
 };
 

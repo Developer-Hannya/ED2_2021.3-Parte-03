@@ -36,6 +36,7 @@
 		<Unit filename="BTree.h" />
 		<Unit filename="FileReader.cpp" />
 		<Unit filename="FileReader.h" />
+		<Unit filename="NodeBTree.cpp" />
 		<Unit filename="NodeBTree.h" />
 		<Unit filename="NodeRedBlackTree.h" />
 		<Unit filename="RedBlackTree.h" />

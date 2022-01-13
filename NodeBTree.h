@@ -9,8 +9,7 @@ using namespace std;
 
 class NodeBTree {
 
-
-    public:
+    private:
 
         char *keys;
 
@@ -21,6 +20,8 @@ class NodeBTree {
         int nKeys;
 
         bool leaf;
+
+    public:
 
         NodeBTree(int degree, bool leafi);
 

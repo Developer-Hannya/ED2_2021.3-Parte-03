@@ -9,9 +9,10 @@ using namespace std;
 
 class NodeBTree {
 
-    private:
 
-        std::vector<std::string> *keys;
+    public:
+
+        char *keys;
 
         int maxDegree;
 
@@ -21,17 +22,33 @@ class NodeBTree {
 
         bool leaf;
 
-    public:
-
         NodeBTree(int degree, bool leafi);
 
-        NodeBTree *searchID(std::string id);
+        NodeBTree *searchID(char id);
 
         void traverse();
 
-        void insertId(std::string id);
+        void insertId(char id);
 
         void splitChild(int i, NodeBTree *y);
+
+        ///gets e sets
+
+        void setKeys(char key);
+
+        void setMaxDegree(int x);
+
+        void setNKeys(int n);
+
+        void setBoolLeaf(bool l);
+
+        char getKeys(int index);
+
+        int getMaxDegree();
+
+        int getNKeys();
+
+        bool getLeaf();
 
 };
 

@@ -19,9 +19,11 @@ class BTree {
 
         ~BTree();
 
-        std::string searchID(std::string id);
+        NodeBTree* callSearch(char id);
 
         void callTraverse();
+
+        void callInsert(char id);
 
 };
 

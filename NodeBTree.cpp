@@ -7,7 +7,7 @@ using namespace std;
 
 NodeBTree::NodeBTree(int degree, bool leafi) {
 
-    setMaxDegree(degree);
+    maxDegree = degree;
 
     leaf = leafi;
 
@@ -15,7 +15,7 @@ NodeBTree::NodeBTree(int degree, bool leafi) {
 
     this->children = new NodeBTree *[2 * maxDegree];
 
-    this->setNKeys(0);
+    this->nKeys = 0;
 
 }
 
@@ -66,72 +66,5 @@ void NodeBTree::traverse() {
         children[i]->traverse();
 
     }
-
-}
-
-
-void NodeBTree::setKeys(char key, int i) {
-
-    if (keys[i] == NULL) {
-
-        keys[i] = key;
-
-    }
-
-}
-
-void NodeBTree::setMaxDegree(int x) {
-
-    this->maxDegree = x;
-
-}
-
-void NodeBTree::setNKeys(int n) {
-
-    this->nKeys = n;
-
-}
-
-void NodeBTree::setBoolLeaf(bool l) {
-
-    this->leaf = l;
-
-}
-
-char NodeBTree::getKeys(int index) {
-
-    for (int i = 0; i < this->nKeys; i++) {
-
-            if(keys[i] != NULL) {
-
-                return keys[i];
-
-            }
-
-            else {
-
-                return NULL;
-
-            }
-
-    }
-
-}
-
-int NodeBTree::getMaxDegree() {
-
-    return this->maxDegree;
-
-}
-
-int NodeBTree::getNKeys() {
-
-    return this->nKeys;
-
-}
-
-bool NodeBTree::getLeaf() {
-
-    return this->leaf;
 
 }

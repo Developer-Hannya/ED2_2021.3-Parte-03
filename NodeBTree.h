@@ -9,7 +9,7 @@ using namespace std;
 
 class NodeBTree {
 
-    private:
+    public:
 
         char *keys;
 
@@ -21,8 +21,6 @@ class NodeBTree {
 
         bool leaf;
 
-    public:
-
         NodeBTree(int degree, bool leafi);
 
         NodeBTree *searchID(char id);
@@ -32,24 +30,6 @@ class NodeBTree {
         void insertIdNonFull(char id);
 
         void splitChild(int i, NodeBTree *y);
-
-        ///gets e sets
-
-        void setKeys(char key);
-
-        void setMaxDegree(int x);
-
-        void setNKeys(int n);
-
-        void setBoolLeaf(bool l);
-
-        char getKeys(int index);
-
-        int getMaxDegree();
-
-        int getNKeys();
-
-        bool getLeaf();
 
 };
 

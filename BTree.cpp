@@ -34,17 +34,17 @@ void BTree::insertId(char id) {
 
     if (root == NULL) {
 
-        root = new NodeBTree(6, true);
+        root = new NodeBTree(5, true);
 
-        root->setKeys(id);
+        root->keys[0] = id;
 
-        root->setNKeys(1);
+        root->nKeys++;
 
     }
 
     else {
 
-        if (root->getNKeys() == 2*maxDegree-1) {
+        if (root->nKeys == 2*maxDegree-1) {
 
             NodeBTree *s = new NodeBTree(maxDegree, false);
 
@@ -60,14 +60,14 @@ void BTree::insertId(char id) {
 
             }
 
-            s->children[i]->insertId(id);
+            s->children[i]->insertIdNonFull(id);
 
             root = s;
         }
 
         else {
 
-            root->insertId(id);
+            root->insertIdNonFull(id);
 
         }
 

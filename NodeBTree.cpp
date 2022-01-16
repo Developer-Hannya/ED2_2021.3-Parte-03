@@ -68,3 +68,91 @@ void NodeBTree::traverse() {
     }
 
 }
+
+void NodeBTree::insertIdNonFull(char id) {
+
+    int i = nKeys-1;
+
+    if (leaf == true) {
+
+        while (i >= 0 && keys[i] > id) {
+
+            keys[i+1] = keys[i];
+
+            i--;
+
+        }
+
+        keys[i+1] = id;
+
+        nKeys++;
+
+    }
+
+    else {
+
+        while (i >= 0 && keys[i] > id)
+            i--;
+
+        if (children[i+1]->nKeys == 2 * maxDegree - 1) {
+
+            splitChild(i+1, children[i+1]);
+
+            if (keys[i+1] < id) {
+
+                i++;
+
+            }
+
+        }
+
+        children[i+1]->insertIdNonFull(id);
+
+    }
+
+}
+
+void NodeBTree::splitChild(int i, NodeBTree *y) {
+
+    NodeBTree *z = new NodeBTree(y->maxDegree, y->leaf);
+
+    z->nKeys = maxDegree - 1;
+
+    for (int j = 0; j < maxDegree - 1; j++) {
+
+        z->keys[j] = y->keys[j + maxDegree];
+
+    }
+
+
+    if (y->leaf == false) {
+
+        for (int j = 0; j < maxDegree; j++) {
+
+            z->children[j] = y->children[j + maxDegree];
+
+        }
+
+    }
+
+    y->nKeys = maxDegree - 1;
+
+    for (int j = nKeys; j >= i + 1; j--) {
+
+        children[j + 1] = children[j];
+
+    }
+
+    children[i + 1] = z;
+
+    for (int j = nKeys - 1; j >= i; j--) {
+
+        keys[j + 1] = keys[j];
+
+    }
+
+    keys[i] = y->keys[maxDegree - 1];
+
+    nKeys++;
+
+}

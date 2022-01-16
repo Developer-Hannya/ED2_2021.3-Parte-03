@@ -1,6 +1,10 @@
 #ifndef REDBLACKTREE_H_INCLUDED
 #define REDBLACKTREE_H_INCLUDED
 
+class RedBlackTree {
 
+
+
+};
 
 #endif // REDBLACKTREE_H_INCLUDED

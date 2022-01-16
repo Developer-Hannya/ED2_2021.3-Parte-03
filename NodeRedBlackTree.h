@@ -5,9 +5,9 @@ class NodeRedBlackTree {
 
     char id;
 
-    NodeRedBlackTree left;
+    NodeRedBlackTree *left;
 
-    NodeRedBlackTree right;
+    NodeRedBlackTree *right;
 
     bool isBlack;
 

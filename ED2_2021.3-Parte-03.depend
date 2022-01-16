@@ -73,7 +73,7 @@
 	<vector>
 	<string>
 
-1641390966 c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.h
+1642358421 c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.h
 
 1639944444 source:c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.cpp
 	<string>
@@ -83,7 +83,7 @@
 1642356961 source:c:\users\bernardo\ed2_2021.3-parte-03\btree.cpp
 	"BTree.h"
 
-1642356370 source:c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.cpp
+1642357734 source:c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.cpp
 	"NodeBTree.h"
 	<iostream>
 

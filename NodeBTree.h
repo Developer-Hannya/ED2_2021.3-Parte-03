@@ -29,7 +29,7 @@ class NodeBTree {
 
         void traverse();
 
-        void insertId(char id);
+        void insertIdNonFull(char id);
 
         void splitChild(int i, NodeBTree *y);
 

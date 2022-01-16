@@ -23,7 +23,9 @@ class BTree {
 
         void callTraverse();
 
-        void callInsert(char id);
+        void insertId(char id);
+
+        NodeBTree setRoot(char id);
 
 };
 

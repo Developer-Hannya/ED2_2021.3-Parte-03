@@ -102,7 +102,17 @@ char NodeBTree::getKeys(int index) {
 
     for (int i = 0; i < this->nKeys; i++) {
 
-        return keys[i];
+            if(keys[i] != NULL) {
+
+                return keys[i];
+
+            }
+
+            else {
+
+                return NULL;
+
+            }
 
     }
 

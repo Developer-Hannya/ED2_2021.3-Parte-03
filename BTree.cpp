@@ -30,7 +30,7 @@ NodeBTree *BTree::callSearch(char id) {
 
 }
 
-void BTree::callInsert(char id) {
+void BTree::insertId(char id) {
 
     if (root == NULL) {
 

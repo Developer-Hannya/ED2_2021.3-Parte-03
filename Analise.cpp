@@ -33,6 +33,7 @@ vector<TikTokData> Analise::importacao(int N)
 
         registroB.setInfo(data.at(ale).getId(),data.at(ale).getReview(),data.at(ale).getUpVotes(),data.at(ale).getAppVersion(),data.at(ale).getPostDate());
         registro.push_back(registroB);
+        count++;
     }
     fin.close();
 

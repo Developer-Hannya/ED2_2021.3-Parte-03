@@ -28,6 +28,8 @@ class RedBlackTree {
 
         NodeRedBlackTree *insertHelp(NodeRedBlackTree *root, char data);
 
+        void insertId(char data);
+
 };
 
 #endif // REDBLACKTREE_H_INCLUDED

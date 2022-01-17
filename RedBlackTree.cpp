@@ -127,68 +127,127 @@ NodeRedBlackTree *RedBlackTree::insertHelp(NodeRedBlackTree *node, char data) {
 
         }
 
-        else if(this.rl == true) {
+        else if(this->rl == true) {
 
             node->right = rotateRight(node->right);
 
-            node->right->parent = ndoe;
+            node->right->parent = node;
 
             node = rotateLeft(node);
 
-            node->colour = true;
+            node->isBlack = true;
 
-            node->left->colour = false;
+            node->left->isBlack = false;
 
-            this.rl = false;
+            this->rl = false;
         }
-        else if(this.lr)  // for left and then right.
-        {
-            root.left = rotateLeft(root.left);
-            root.left.parent = root;
-            root = rotateRight(root);
-            root.colour = 'B';
-            root.right.colour = 'R';
-            this.lr = false;
+
+        else if(this->lr) {
+
+            node->left = rotateLeft(node->left);
+
+            node->left->parent = node;
+
+            node = rotateRight(node);
+
+            node->isBlack = true;
+
+            node->right->isBlack = false;
+
+            this->lr = false;
+
         }
-        // when rotation and recolouring is done flags are reset.
-        // Now lets take care of RED RED conflict
-        if(f)
-        {
-            if(root.parent.right == root)  // to check which child is the current node of its parent
-            {
-                if(root.parent.left==null || root.parent.left.colour=='B')  // case when parent's sibling is black
-                {// perform certaing rotation and recolouring. This will be done while backtracking. Hence setting up respective flags.
-                    if(root.left!=null && root.left.colour=='R')
-                        this.rl = true;
-                    else if(root.right!=null && root.right.colour=='R')
-                        this.ll = true;
+
+        if(f == true) {
+
+            if(node->parent->right == node) {
+
+                if(node->parent->left == nullptr || node->parent->left->isBlack == true) {
+
+                    if(node->left != nullptr && node->left->isBlack == false) {
+
+                        this->rl = true;
+
+                    }
+
+                    else if(node->right != nullptr && node->right->isBlack == false) {
+
+                        this->ll = true;
+
+                    }
                 }
-                else // case when parent's sibling is red
-                {
-                    root.parent.left.colour = 'B';
-                    root.colour = 'B';
-                    if(root.parent!=this.root)
-                        root.parent.colour = 'R';
+
+                else {
+
+                    node->parent->left->isBlack = true;
+
+                    node->isBlack = true;
+
+                    if(node->parent != this->root) {
+
+                        node->parent->isBlack = false;
+
+                    }
+
+                }
+
+            }
+
+            else {
+
+                if(node->parent->right == nullptr || node->parent->right->isBlack == true) {
+
+                    if(node->left != nullptr && node->left->isBlack == false) {
+
+                        this->rr = true;
+
+                    }
+
+                    else if(node->right != nullptr && node->right->isBlack == false) {
+
+                        this->lr = true;
+
+                    }
+
+                }
+
+                else {
+
+                    node->parent->right->isBlack = true;
+
+                    node->isBlack = true;
+
+                    if(node->parent != this->root) {
+
+                        node->parent->isBlack = false;
+
+                    }
+
                 }
             }
-            else
-            {
-                if(root.parent.right==null || root.parent.right.colour=='B')
-                {
-                    if(root.left!=null && root.left.colour=='R')
-                        this.rr = true;
-                    else if(root.right!=null && root.right.colour=='R')
-                        this.lr = true;
-                }
-                else
-                {
-                    root.parent.right.colour = 'B';
-                    root.colour = 'B';
-                    if(root.parent!=this.root)
-                        root.parent.colour = 'R';
-                }
-            }
+
             f = false;
+
         }
-        return(root);
+
+    return(node);
+
+}
+
+void RedBlackTree::insertId(char data) {
+
+        if(this->root == nullptr) {
+
+            this->root = new NodeRedBlackTree(data);
+
+            this->root->isBlack = true;
+
+        }
+
+        else {
+
+            this->root = insertHelp(this->root, data);
+
+        }
+
     }

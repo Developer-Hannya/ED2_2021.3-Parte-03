@@ -12,11 +12,21 @@ class RedBlackTree {
 
         NodeRedBlackTree *root;
 
+        bool ll;
+
+        bool rr;
+
+        bool lr;
+
+        bool rl;
+
         RedBlackTree();
 
         NodeRedBlackTree *rotateLeft(NodeRedBlackTree *node);
 
         NodeRedBlackTree *rotateRight(NodeRedBlackTree *node);
+
+        NodeRedBlackTree *insertHelp(NodeRedBlackTree *root, char data);
 
 };
 

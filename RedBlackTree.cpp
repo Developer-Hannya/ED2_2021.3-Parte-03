@@ -4,6 +4,14 @@ RedBlackTree::RedBlackTree() {
 
     this->root = nullptr;
 
+    ll = false;
+
+    rr = false;
+
+    lr = false;
+
+    rl = false;
+
 }
 
 
@@ -51,25 +59,25 @@ NodeRedBlackTree *RedBlackTree::rotateRight(NodeRedBlackTree *node) {
 
 }
 
-NodeRedBlackTree RedBlackTree::insertHelp(Node root, char data) {
+NodeRedBlackTree *RedBlackTree::insertHelp(NodeRedBlackTree *node, char data) {
 
-    boolean f = false;
+    bool f = false;
 
-    if(root == nullptr) {
+    if(node == nullptr) {
 
         return(new NodeRedBlackTree(data));
 
     }
 
-    else if(data < root.data) {
+    else if(data < node->id) {
 
-            root.left = insertHelp(root.left, data);
+            node->left = insertHelp(node->left, data);
 
-            root.left.parent = root;
+            node->left->parent = root;
 
-            if(root != this->root) {
+            if(node != this->root) {
 
-                if(root->isBlack == false && root->left->isBlack == false) {
+                if(node->isBlack == false && node->left->isBlack == false) {
 
                     f = true;
 
@@ -81,39 +89,55 @@ NodeRedBlackTree RedBlackTree::insertHelp(Node root, char data) {
 
         else {
 
-            root.right = insertHelp(root.right,data);
-            root.right.parent = root;
-            if(root!=this.root)
-            {
-                if(root.colour=='R' && root.right.colour=='R')
+            node->right = insertHelp(node->right, data);
+            node->right->parent = node;
+            if(node != this->root) {
+
+                if(node->isBlack == false && node->right->isBlack == false) {
+
                     f = true;
+
+                }
+
             }
-        // at the same time of insertion, we are also assigning parent nodes
-        // also we are checking for RED RED conflicts
+
         }
 
-        // now lets rotate.
-        if(this.ll) // for left rotate.
-        {
-            root = rotateLeft(root);
-            root.colour = 'B';
-            root.left.colour = 'R';
-            this.ll = false;
+        if(this->ll == true) {
+
+            node = rotateLeft(node);
+
+            node->isBlack = true;
+
+            node->left->isBlack = false;
+
+            this->ll = false;
+
         }
-        else if(this.rr) // for right rotate
-        {
-            root = rotateRight(root);
-            root.colour = 'B';
-            root.right.colour = 'R';
-            this.rr  = false;
+
+        else if(this->rr == true) {
+
+            node = rotateRight(node);
+
+            node->isBlack = true;
+
+            node->right->isBlack = false;
+
+            this->rr  = false;
+
         }
-        else if(this.rl)  // for right and then left
-        {
-            root.right = rotateRight(root.right);
-            root.right.parent = root;
-            root = rotateLeft(root);
-            root.colour = 'B';
-            root.left.colour = 'R';
+
+        else if(this.rl == true) {
+
+            node->right = rotateRight(node->right);
+
+            node->right->parent = ndoe;
+
+            node = rotateLeft(node);
+
+            node->colour = true;
+
+            node->left->colour = false;
 
             this.rl = false;
         }

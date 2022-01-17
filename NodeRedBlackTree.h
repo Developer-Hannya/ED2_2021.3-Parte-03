@@ -3,17 +3,19 @@
 
 class NodeRedBlackTree {
 
-    char id;
+    public:
 
-    NodeRedBlackTree *left;
+        char id;
 
-    NodeRedBlackTree *right;
+        NodeRedBlackTree *left;
 
-    bool isBlack;
+        NodeRedBlackTree *right;
 
-    NodeRedBlackTree *parent;
+        bool isBlack;
 
-    NodeRedBlackTree(char data);
+        NodeRedBlackTree *parent;
+
+        NodeRedBlackTree(char data);
 
 };
 

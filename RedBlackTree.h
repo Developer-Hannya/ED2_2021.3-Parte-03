@@ -3,11 +3,16 @@
 
 #include "NodeRedBlackTree.h"
 
+#include <iostream>
+
+
 class RedBlackTree {
 
-    NodeRedBlackTree root;
+    NodeRedBlackTree *root;
 
     RedBlackTree();
+
+    NodeRedBlackTree rotateLeft(NodeRedBlackTree node);
 
 };
 

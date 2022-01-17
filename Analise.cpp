@@ -5,6 +5,8 @@
 
 #include "Analise.h"
 #include "TikTokData.h"
+#include "BTree.h"
+#include "RedBlackTree.h"
 
 using namespace std;
 

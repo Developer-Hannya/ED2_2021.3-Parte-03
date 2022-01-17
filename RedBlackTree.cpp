@@ -7,11 +7,11 @@ RedBlackTree::RedBlackTree() {
 }
 
 
-NodeRedBlackTree RedBlackTree::RedBlackTree(NodeRedBlackTree node) {
+NodeRedBlackTree *RedBlackTree::rotateLeft(NodeRedBlackTree *node) {
 
-    NodeRedBlackTree x = node->right;
+    NodeRedBlackTree *x = node->right;
 
-    NodeRedBlackTree y = x->left;
+    NodeRedBlackTree *y = x->left;
 
     x->left = node;
 
@@ -19,7 +19,29 @@ NodeRedBlackTree RedBlackTree::RedBlackTree(NodeRedBlackTree node) {
 
     node->parent = x;
 
-    if(y != null) {
+    if(y != nullptr) {
+
+        y->parent = node;
+
+    }
+
+    return x;
+
+}
+
+NodeRedBlackTree *RedBlackTree::rotateRight(NodeRedBlackTree *node) {
+
+    NodeRedBlackTree *x = node->left;
+
+    NodeRedBlackTree *y = x->right;
+
+    x->right = node;
+
+    node->left = y;
+
+    node->parent = x;
+
+    if(y != nullptr) {
 
         y->parent = node;
 

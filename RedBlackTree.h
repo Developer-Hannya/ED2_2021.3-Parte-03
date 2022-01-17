@@ -8,11 +8,15 @@
 
 class RedBlackTree {
 
-    NodeRedBlackTree *root;
+    public:
 
-    RedBlackTree();
+        NodeRedBlackTree *root;
 
-    NodeRedBlackTree rotateLeft(NodeRedBlackTree node);
+        RedBlackTree();
+
+        NodeRedBlackTree *rotateLeft(NodeRedBlackTree *node);
+
+        NodeRedBlackTree *rotateRight(NodeRedBlackTree *node);
 
 };
 

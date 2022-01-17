@@ -1,0 +1,41 @@
+# depslib dependency file v1.0
+1640116544 source:c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\filereader.cpp
+	"FileReader.h"
+
+1640115831 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\filereader.h
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<process.h>
+	<iomanip>
+	"TikTokData.h"
+
+1639944253 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\tiktokdata.h
+	<string>
+	<vector>
+
+1639944444 source:c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\tiktokdata.cpp
+	<string>
+	<iostream>
+	"TikTokData.h"
+
+1641472298 source:c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\main.cpp
+	<iostream>
+	"BTree.h"
+	"RedBlackTree.h"
+
+1641475275 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\btree.h
+	<string>
+	"NodeBTree.h"
+
+1641473018 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\nodebtree.h
+	<vector>
+	<string>
+
+1641390966 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\redblacktree.h
+

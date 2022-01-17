@@ -59,10 +59,12 @@
 	<string>
 	<vector>
 
-1641472298 source:c:\users\bernardo\ed2_2021.3-parte-03\main.cpp
+1642428377 source:c:\users\bernardo\ed2_2021.3-parte-03\main.cpp
 	<iostream>
 	"BTree.h"
 	"RedBlackTree.h"
+	"NodeBTree.h"
+	"NodeRedBlackTree.h"
 
 1642355520 c:\users\bernardo\ed2_2021.3-parte-03\btree.h
 	<string>
@@ -73,7 +75,8 @@
 	<vector>
 	<string>
 
-1642358421 c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.h
+1642428258 c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.h
+	"NodeRedBlackTree.h"
 
 1639944444 source:c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.cpp
 	<string>
@@ -86,4 +89,6 @@
 1642357734 source:c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.cpp
 	"NodeBTree.h"
 	<iostream>
+
+1642428298 c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.h
 

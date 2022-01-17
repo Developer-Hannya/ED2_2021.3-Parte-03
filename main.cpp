@@ -2,6 +2,8 @@
 
 #include "BTree.h"
 #include "RedBlackTree.h"
+#include "NodeBTree.h"
+#include "NodeRedBlackTree.h"
 
 using namespace std;
 

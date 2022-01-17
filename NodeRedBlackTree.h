@@ -11,7 +11,9 @@ class NodeRedBlackTree {
 
     bool isBlack;
 
-    NodeRedBlackTree parent;
+    NodeRedBlackTree *parent;
+
+    NodeRedBlackTree(char data);
 
 };
 

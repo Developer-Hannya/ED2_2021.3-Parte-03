@@ -48,51 +48,79 @@ void TikTokData::setReview(char reviewX[]) {
 }
 
 void TikTokData::setUpVotes(int upVotes) {
+
     this->upVotes = upVotes;
+
 }
 
 void TikTokData::setAppVersion(std::string appVersion) {
+
     this->appVersion = appVersion;
+
 }
 
 void TikTokData::setPostDate(std::string postDate) {
+
     this->postDate = postDate;
+
 }
 
 void TikTokData::setInfo(char id[], char review[], int upVotes, std::string appVersion, std::string postDate) {
+
     setId(id);
+
     setReview(review);
+
     setUpVotes(upVotes);
+
     setAppVersion(appVersion);
+
     setPostDate(postDate);
+
 }
 
 
 char TikTokData::getId() {
+
     return this->id;
+
 }
 
 char TikTokData::getReview() {
+
     return this->review;
+
 }
 
 int TikTokData::getUpVotes() {
+
     return this->upVotes;
+
 }
 
 std::string TikTokData::getAppVersion() {
+
     return this->appVersion;
+
 }
 
 std::string TikTokData::getPostDate() {
+
     return this->postDate;
+
 }
 
 void TikTokData::getData() {
     std::cout<< getId();
+
     std::cout<< getReview();
+
     std::cout<< getUpVotes();
+
     std::cout<< getAppVersion();
+
     std::cout<< getPostDate();
+
     std::cout<< std::endl;
+
 }

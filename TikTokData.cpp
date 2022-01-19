@@ -58,7 +58,7 @@ void TikTokData::setPostDate(std::string postDate) {
     this->postDate = postDate;
 }
 
-void TikTokData::setInfo(char id, std::string review, int upVotes, std::string appVersion, std::string postDate) {
+void TikTokData::setInfo(char id[], std::string review, int upVotes, std::string appVersion, std::string postDate) {
     setId(id);
     setReview(review);
     setUpVotes(upVotes);

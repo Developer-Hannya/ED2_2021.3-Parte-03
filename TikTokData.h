@@ -16,7 +16,7 @@ class TikTokData {
         void setUpVotes(int upVotes);
         void setAppVersion(std::string appVersion);
         void setPostDate(std::string postDate);
-        void setInfo(char id, std::string review, int upVotes, std::string appVersion, std::string postDate);
+        void setInfo(char id[], std::string review, int upVotes, std::string appVersion, std::string postDate);
 
         ///as funções Get dos dados
         char getId();

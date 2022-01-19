@@ -3,6 +3,8 @@
 #include <time.h>
 #include <vector>
 #include <stdlib.h>
+#include <stdio.h>
+
 
 #include "Analise.h"
 #include "TikTokData.h"
@@ -30,6 +32,7 @@ vector<TikTokData> Analise::importacao(int N,vector<TikTokData> data)
     }
 
     while(counti < N) {
+
         srand(time(NULL));
 
         ale = rand() % 3500000;

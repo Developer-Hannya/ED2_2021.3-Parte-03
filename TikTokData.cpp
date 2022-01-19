@@ -80,13 +80,13 @@ void TikTokData::setInfo(char id[], char review[], int upVotes, std::string appV
 }
 
 
-char TikTokData::getId() {
+char* TikTokData::getId() {
 
     return this->id;
 
 }
 
-char TikTokData::getReview() {
+char* TikTokData::getReview() {
 
     return this->review;
 

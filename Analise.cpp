@@ -15,6 +15,7 @@ using namespace std;
 
 Analise::Analise()
 {
+
 }
 
 vector<TikTokData> Analise::importacao(int N,vector<TikTokData> data)

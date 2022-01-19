@@ -6,7 +6,6 @@ class moduloteste
 {
     public:
        moduloteste();
-       ~moduloteste();
 
        void acessaRegistro(int i);
        void testeImportacao();

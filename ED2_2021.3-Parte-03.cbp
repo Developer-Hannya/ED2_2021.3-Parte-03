@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Analise.h" />
 		<Unit filename="BTree.cpp" />
 		<Unit filename="BTree.h" />
 		<Unit filename="FileReader.cpp" />

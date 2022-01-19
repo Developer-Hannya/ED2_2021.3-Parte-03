@@ -66,7 +66,7 @@
 	"NodeBTree.h"
 	"NodeRedBlackTree.h"
 
-1642355520 c:\users\bernardo\ed2_2021.3-parte-03\btree.h
+1642587310 c:\users\bernardo\ed2_2021.3-parte-03\btree.h
 	<string>
 	"NodeBTree.h"
 
@@ -84,7 +84,7 @@
 	<iostream>
 	"TikTokData.h"
 
-1642356961 source:c:\users\bernardo\ed2_2021.3-parte-03\btree.cpp
+1642587382 source:c:\users\bernardo\ed2_2021.3-parte-03\btree.cpp
 	"BTree.h"
 
 1642357734 source:c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.cpp

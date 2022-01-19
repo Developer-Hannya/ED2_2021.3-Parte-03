@@ -30,11 +30,11 @@ NodeBTree *BTree::callSearch(char id) {
 
 }
 
-void BTree::insertId(char id) {
+void BTree::insertId(int n, char id) {
 
     if (root == NULL) {
 
-        root = new NodeBTree(5, true);
+        root = new NodeBTree(n, true);
 
         root->keys[0] = id;
 

@@ -2,6 +2,9 @@
 #include "RedBlackTree.h"
 #include "NodeBTree.h"
 #include "NodeRedBlackTree.h"
+#include "TikTokData.h"
+#include "moduloteste.h"
+#include "Analise.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -9,6 +12,19 @@
 #include <fstream>
 
 using namespace std;
+
+
+void auxInsertBTree(BTree tree) {
+
+
+
+}
+
+void auxInsertRedBlackTree(RedBlackTree tree) {
+
+
+
+}
 
 int main()
 {
@@ -18,25 +34,25 @@ int main()
 
     int i, n, a, id;
 
-    cout << "[1] a'rvore vermelho-preto" << endl << "[2] a'rvoreB" << endl << "[3] sair"<< endl;
+    cout << "[1] a'rvore vermelho-preto" << endl << "[2] a'rvore B" << endl << "[3] sair"<< endl;
 
-    cin>>i;
+    cin >> i;
 
     if(i == 1) {
 
         RedBlackTree arvVP;
 
-        arvVP.insertId();
+        auxInsertRedBlackTree(arvVP);
 
         cout << "[1]modoDeAnalise"<< endl << "[2]modoDeTeste" << endl;
 
         cin>>a;
 
-        if(a==1) {
+        if(a == 1) {
 
             arq.open("saida.txt");
 
-            if(arq.is_open) {
+            if(arq.is_open()) {
 
                 while(getline(arq,linha)) {
 
@@ -68,15 +84,15 @@ int main()
 
     }
 
-    else if(i==2) {
+    else if(i == 2) {
 
         cout<< "digite a ordem de b" << endl;
 
         cin>>n;
 
-        BTree arvB = new BTree(n);
+        BTree arvB = BTree(n);
 
-        arvB.insertId();
+        auxInsertBTree(arvB);
 
         cout<< "[1]modoDeAnalise"<< endl << "[2]modoDeTeste" << endl;
 
@@ -86,7 +102,7 @@ int main()
 
             arq.open("saida.txt");
 
-            if(arq.is_open) {
+            if(arq.is_open()) {
 
                 while(getline(arq,linha)) {
 

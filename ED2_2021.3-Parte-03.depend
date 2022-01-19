@@ -39,3 +39,64 @@
 
 1641390966 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\redblacktree.h
 
+1640116544 source:c:\users\bernardo\ed2_2021.3-parte-03\filereader.cpp
+	"FileReader.h"
+
+1640115831 c:\users\bernardo\ed2_2021.3-parte-03\filereader.h
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<process.h>
+	<iomanip>
+	"TikTokData.h"
+
+1639944253 c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.h
+	<string>
+	<vector>
+
+1642428377 source:c:\users\bernardo\ed2_2021.3-parte-03\main.cpp
+	<iostream>
+	"BTree.h"
+	"RedBlackTree.h"
+	"NodeBTree.h"
+	"NodeRedBlackTree.h"
+
+1642355520 c:\users\bernardo\ed2_2021.3-parte-03\btree.h
+	<string>
+	"NodeBTree.h"
+
+1642356083 c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.h
+	<iostream>
+	<vector>
+	<string>
+
+1642578304 c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.h
+	"NodeRedBlackTree.h"
+	<iostream>
+
+1639944444 source:c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.cpp
+	<string>
+	<iostream>
+	"TikTokData.h"
+
+1642356961 source:c:\users\bernardo\ed2_2021.3-parte-03\btree.cpp
+	"BTree.h"
+
+1642357734 source:c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.cpp
+	"NodeBTree.h"
+	<iostream>
+
+1642578255 c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.h
+
+1642578268 source:c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.cpp
+	"NodeRedBlackTree.h"
+	<iostream>
+
+1642578281 source:c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.cpp
+	"RedBlackTree.h"
+

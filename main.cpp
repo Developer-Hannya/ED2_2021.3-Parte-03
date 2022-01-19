@@ -1,6 +1,9 @@
-#include <iostream>
 #include "BTree.h"
 #include "RedBlackTree.h"
+#include "NodeBTree.h"
+#include "NodeRedBlackTree.h"
+
+#include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
 #include <fstream>
@@ -82,7 +85,7 @@ int main()
 
     }
     else
-        cout<< "opção invalida"<<endl;
+        cout<< "opÃ§Ã£o invalida"<<endl;
 
 
     return 0;

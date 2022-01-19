@@ -2,16 +2,75 @@
 
 BTree::BTree(int degree) {
 
-    this->root == NULL;
+    root == NULL;
 
-    this->maxDegree = degree;
+    maxDegree = degree;
 
 }
 
 BTree::~BTree() {
+
     delete this;
+
 }
 
-void BTree::traverse() {
+void BTree::callTraverse() {
+
+    if (root != NULL) {
+
+            root->traverse();
+
+    }
+
+}
+
+NodeBTree *BTree::callSearch(char id) {
+
+    return (root == NULL)? NULL : root->searchID(id);
+
+}
+
+void BTree::insertId(char id) {
+
+    if (root == NULL) {
+
+        root = new NodeBTree(5, true);
+
+        root->keys[0] = id;
+
+        root->nKeys++;
+
+    }
+
+    else {
+
+        if (root->nKeys == 2*maxDegree-1) {
+
+            NodeBTree *s = new NodeBTree(maxDegree, false);
+
+            s->children[0] = root;
+
+            s->splitChild(0, root);
+
+            int i = 0;
+
+            if (s->keys[0] < id) {
+
+                i++;
+
+            }
+
+            s->children[i]->insertIdNonFull(id);
+
+            root = s;
+        }
+
+        else {
+
+            root->insertIdNonFull(id);
+
+        }
+
+    }
 
 }

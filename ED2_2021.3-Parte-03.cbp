@@ -45,6 +45,8 @@
 		<Unit filename="TikTokData.cpp" />
 		<Unit filename="TikTokData.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="moduloteste.cpp" />
+		<Unit filename="moduloteste.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

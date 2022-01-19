@@ -27,7 +27,7 @@ TikTokData::~TikTokData() {
 
 }
 
-void TikTokData::setId(char[] idi) {
+void TikTokData::setId(char idi[]) {
 
     for(int i = 0; i < 86; i++) {
 
@@ -37,8 +37,13 @@ void TikTokData::setId(char[] idi) {
 
 }
 
-void TikTokData::setReview(char[] review) {
-    this->review = review;
+void TikTokData::setReview(char reviewX[]) {
+
+    for (int i = 0; i < 900; i++) {
+
+        this->review[i] = reviewX[i];
+
+    }
 }
 
 void TikTokData::setUpVotes(int upVotes) {

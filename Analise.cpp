@@ -2,6 +2,7 @@
 #include <fstream>
 #include <time.h>
 #include <vector>
+#include <stdlib.h>
 
 #include "Analise.h"
 #include "TikTokData.h"

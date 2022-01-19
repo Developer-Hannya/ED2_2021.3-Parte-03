@@ -55,14 +55,14 @@ void Analise::insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BT
 
     start = clock();
 
-    for(int it = registrosimportados.begin(); it != registrosimportados.end(); it++) {
+    for(int it = 0;it != registrosimportados.size();it++) {
 
         VP.insertId(registrosimportados.at(it).getId());
     }
 
-    for(int it = registrosimportados.begin();it != registrosimportados.end(); it++) {
+    for(int it = 0;it != registrosimportados.size();it++) {
 
-        VP.insert(registrosimportados.at(it));
+        VP.insertId(registrosimportados.at(it));
 
     }
 
@@ -72,15 +72,15 @@ void Analise::insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BT
 
     start = clock();
 
-    for(int it = registrosimportados.begin();it != registrosimportados.end();it++) {
+    for(int it = 0;it != registrosimportados.size();it++) {
 
         AVL.insertId(registrosimportados.at(it).getId());
 
     }
 
-    for(int it = registrosimportados.begin();it != registrosimportados.end();it++) {
+    for(int it = 0;it != registrosimportados.size();it++) {
 
-        AVL.insert(registrosimportados.at(it).getId());
+        AVL.insertId(registrosimportados.at(it).getId());
 
     }
 
@@ -105,13 +105,13 @@ void Analise::busca(int B,RedBlackTree VP,BTree AVL,vector<TikTokData> registros
 
     for(int i = 0;i < B;i++) {
 
-        VP.callSearch(registrosimportados.at(ale).getId());
+        VP.searchId(registrosimportados.at(ale).getId());
 
     }
 
     for(int i = 0;i < B;i++) {
 
-        VP.search(registrosimportados.at(ale));
+        VP.searchId(registrosimportados.at(ale));
 
     }
 
@@ -123,13 +123,13 @@ void Analise::busca(int B,RedBlackTree VP,BTree AVL,vector<TikTokData> registros
 
     for(int i = 0;i < B;i++) {
 
-        AVL.searchId(registrosimportados.at(ale).getId());
+        AVL.callSearch(registrosimportados.at(ale).getId());
 
     }
 
     for(int i = 0;i < B;i++) {
 
-        AVL.search(registrosimportados.at(ale));
+        AVL.callSearch(registrosimportados.at(ale));
 
     }
 

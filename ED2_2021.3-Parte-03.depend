@@ -59,7 +59,7 @@
 	<string>
 	<vector>
 
-1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\main.cpp
+1642623483 source:c:\users\bernardo\ed2_2021.3-parte-03\main.cpp
 	"BTree.h"
 	"RedBlackTree.h"
 	"NodeBTree.h"
@@ -126,7 +126,7 @@
 	<vector>
 	"TikTokData.h"
 
-1642622466 c:\users\bernardo\ed2_2021.3-parte-03\analise.h
+1642623987 c:\users\bernardo\ed2_2021.3-parte-03\analise.h
 	<iostream>
 	<vector>
 	"TikTokData.h"

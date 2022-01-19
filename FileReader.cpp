@@ -36,7 +36,9 @@ std::vector<TikTokData> FileReader::readTikTok(std::string tikTokFile) {
 
                 std::istringstream dataFromLine(info);
 
-                std::string id, review, upVotes, appVersion, postDate;
+                char *id;
+
+                std::string review, upVotes, appVersion, postDate;
 
                 getline(dataFromLine, id, ',');
 

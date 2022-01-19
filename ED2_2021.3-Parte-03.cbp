@@ -32,6 +32,7 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Analise.h" />
 		<Unit filename="BTree.cpp" />
 		<Unit filename="BTree.h" />
 		<Unit filename="FileReader.cpp" />
@@ -45,6 +46,8 @@
 		<Unit filename="TikTokData.cpp" />
 		<Unit filename="TikTokData.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="moduloteste.cpp" />
+		<Unit filename="moduloteste.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

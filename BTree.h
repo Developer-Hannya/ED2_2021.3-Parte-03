@@ -7,13 +7,12 @@
 
 class BTree {
 
-    private:
+
+    public:
 
         NodeBTree *root;
 
         int maxDegree;
-
-    public:
 
         BTree(int degree);
 
@@ -23,7 +22,7 @@ class BTree {
 
         void callTraverse();
 
-        void insertId(char id);
+        void insertId(int n, char id);
 
         NodeBTree setRoot(char id);
 

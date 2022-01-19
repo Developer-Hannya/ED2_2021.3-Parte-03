@@ -2,6 +2,9 @@
 #include "RedBlackTree.h"
 #include "NodeBTree.h"
 #include "NodeRedBlackTree.h"
+#include "TikTokData.h"
+#include "moduloteste.h"
+#include "Analise.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -10,83 +13,140 @@
 
 using namespace std;
 
+
+void auxInsertBTree(BTree tree) {
+
+
+
+}
+
+void auxInsertRedBlackTree(RedBlackTree tree) {
+
+
+
+}
+
 int main()
 {
     ifstream arq;
+
     string linha;
-    int i,n,a,id;
-    cout << "[1] arvore vermelho-preto" << endl << "[2] arvoreB" << endl << "[3] sair"<< endl;
-    cin>>i;
-    if(i==1)
-    {
+
+    int i, n, a, id;
+
+    cout << "[1] a'rvore vermelho-preto" << endl << "[2] a'rvore B" << endl << "[3] sair"<< endl;
+
+    cin >> i;
+
+    if(i == 1) {
+
         RedBlackTree arvVP;
-        arvVP.inserir();
-        cout<< "[1]modoDeAnalise"<< endl << "[2]modoDeTeste" << endl;
+
+        auxInsertRedBlackTree(arvVP);
+
+        cout << "[1]modoDeAnalise"<< endl << "[2]modoDeTeste" << endl;
+
         cin>>a;
-        if(a==1)
-        {
+
+        if(a == 1) {
+
             arq.open("saida.txt");
-            if(arq.is_open)
-            {
-                while(getline(arq,linha))
-                {
+
+            if(arq.is_open()) {
+
+                while(getline(arq,linha)) {
+
                     cout<<linha<<endl;
+
                 }
+
                 arq.close();
+
             }
-            else
+
+            else {
+
                 cout<<"Nao foi possivel abrir o arquivo"<<endl;
 
+            }
+
         }
-        else
-        {
+
+        else {
+
             cout<<"digite o id"<<endl;
+
             cin>>id;
-            arvVP.busca(NodeRedBlackTree *raiz,id);
+
+            arvVP.insertId(id);
+
         }
 
     }
-    else if(i==2)
-    {
-        BTree arvB;
+
+    else if(i == 2) {
+
         cout<< "digite a ordem de b" << endl;
+
         cin>>n;
-        arvB.inserir();
+
+        BTree arvB = BTree(n);
+
+        auxInsertBTree(arvB);
+
         cout<< "[1]modoDeAnalise"<< endl << "[2]modoDeTeste" << endl;
+
         cin>>a;
-        if(a==1)
-        {
+
+        if(a==1) {
+
             arq.open("saida.txt");
-            if(arq.is_open)
-            {
-                while(getline(arq,linha))
-                {
+
+            if(arq.is_open()) {
+
+                while(getline(arq,linha)) {
+
                     cout<<linha<<endl;
+
                 }
+
                 arq.close();
+
             }
-            else
+
+            else {
+
                 cout<<"Nao foi possivel abrir o arquivo"<<endl;
 
+            }
+
+
 
         }
-        else
-        {
+        else {
+
             cout<<"digite o id"<<endl;
+
             cin>>id;
-            arvB.busca(NodeBTree *raiz,id);
+
+            arvB.callSearch(id);
 
         }
 
     }
-    else if(i==3)
-    {
-        exit 0;
+
+    else if(i == 3) {
+
+        exit (0);
 
     }
-    else
+
+    else {
+
         cout<< "opção invalida"<<endl;
 
+    }
 
     return 0;
+
 }

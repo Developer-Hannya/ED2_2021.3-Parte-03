@@ -50,7 +50,7 @@ void Analise::insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BT
     start = clock();
     for(int it = registrosimportados.begin();it != registrosimportados.end();it++)
     {
-        VP.insert(registrosimportados.at(it));
+        VP.insertId(registrosimportados.at(it).getId());
     }
     end = clock();
 
@@ -59,7 +59,7 @@ void Analise::insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BT
     start = clock();
     for(int it = registrosimportados.begin();it != registrosimportados.end();it++)
     {
-        AVL.insert(registrosimportados.at(it).getId());
+        AVL.insertId(registrosimportados.at(it).getId());
     }
     end = clock();
 
@@ -78,7 +78,7 @@ void Analise::busca(int B,RedBlackTree VP,BTree AVL,vector<TikTokData> registros
     start = clock();
     for(int i = 0;i < B;i++)
     {
-        VP.search(registrosimportados.at(ale));
+        VP.callSearch(registrosimportados.at(ale).getId());
     }
     end = clock();
 
@@ -87,7 +87,7 @@ void Analise::busca(int B,RedBlackTree VP,BTree AVL,vector<TikTokData> registros
     start = clock();
     for(int i = 0;i < B;i++)
     {
-        AVL.search(registrosimportados.at(ale));
+        AVL.searchId(registrosimportados.at(ale).getId());
     }
     end = clock();
 

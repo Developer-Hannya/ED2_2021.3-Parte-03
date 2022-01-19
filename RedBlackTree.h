@@ -30,6 +30,8 @@ class RedBlackTree {
 
         void insertId(char data);
 
+        NodeRedBlackTree *searchId(NodeRedBlackTree *node, char id);
+
 };
 
 #endif // REDBLACKTREE_H_INCLUDED

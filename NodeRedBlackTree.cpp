@@ -13,4 +13,3 @@ NodeRedBlackTree::NodeRedBlackTree(char info) {
     this->parent = NULL;
 
 }
-

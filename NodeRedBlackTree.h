@@ -17,6 +17,8 @@ class NodeRedBlackTree {
 
         NodeRedBlackTree(char data);
 
+        NodeRedBlackTree *searchId(NodeRedBlackTree *node, char id);
+
 };
 
 #endif // NODEREDBLACKTREE_H_INCLUDED

@@ -39,3 +39,97 @@
 
 1641390966 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\redblacktree.h
 
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\filereader.cpp
+	"FileReader.h"
+
+1642621848 c:\users\bernardo\ed2_2021.3-parte-03\filereader.h
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<process.h>
+	<iomanip>
+	"TikTokData.h"
+
+1642621848 c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.h
+	<string>
+	<vector>
+
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\main.cpp
+	"BTree.h"
+	"RedBlackTree.h"
+	"NodeBTree.h"
+	"NodeRedBlackTree.h"
+	"TikTokData.h"
+	"moduloteste.h"
+	"Analise.h"
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<fstream>
+
+1642621848 c:\users\bernardo\ed2_2021.3-parte-03\btree.h
+	<string>
+	"NodeBTree.h"
+
+1642621848 c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.h
+	<iostream>
+	<vector>
+	<string>
+
+1642621848 c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.h
+	"NodeRedBlackTree.h"
+	<iostream>
+
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.cpp
+	<string>
+	<iostream>
+	"TikTokData.h"
+
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\btree.cpp
+	"BTree.h"
+
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.cpp
+	"NodeBTree.h"
+	<iostream>
+
+1642621848 c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.h
+
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.cpp
+	"NodeRedBlackTree.h"
+	<iostream>
+
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.cpp
+	"RedBlackTree.h"
+
+1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\moduloteste.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+	"moduloteste.h"
+
+1642621848 c:\users\bernardo\ed2_2021.3-parte-03\moduloteste.h
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<process.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<string>
+	<vector>
+	"TikTokData.h"
+
+1642622134 c:\users\bernardo\ed2_2021.3-parte-03\analise.h
+	<iostream>
+	<vector>
+	"TikTokData.h"
+	"RedBlackTree.h"
+	"BTree.h"
+

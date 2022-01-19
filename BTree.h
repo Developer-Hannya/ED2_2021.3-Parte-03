@@ -7,21 +7,24 @@
 
 class BTree {
 
-    private:
+
+    public:
 
         NodeBTree *root;
 
         int maxDegree;
 
-    public:
-
         BTree(int degree);
 
         ~BTree();
 
-        std::string searchID(std::string id);
+        NodeBTree* callSearch(char id);
 
         void callTraverse();
+
+        void insertId(int n, char id);
+
+        NodeBTree setRoot(char id);
 
 };
 

@@ -15,7 +15,7 @@ private:
 public:
     Analise();
 
-    std::vector<TikTokData> importacao(int N);
+    std::vector<TikTokData> importacao(int N,vector<TikTokData> data);
 
     void insercao(std::vector<TikTokData> registrosimportados, RedBlackTree VP,BTree AVL);
 

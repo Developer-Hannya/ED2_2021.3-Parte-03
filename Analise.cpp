@@ -14,7 +14,7 @@ Analise::Analise()
 {
 }
 
-vector<TikTokData> Analise::importacao(int N)
+vector<TikTokData> Analise::importacao(int N,vector<TikTokData> data)
 {
     int counti = 0, ale;
 

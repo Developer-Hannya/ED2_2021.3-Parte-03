@@ -3,22 +3,41 @@
 #include "TikTokData.h"
 
 TikTokData::TikTokData() {
-    this->id = ' ';
-    this->review = "";
+    for (int i = 0; i < 86; i++) {
+
+        this->id[i] = ' ';
+
+    }
+
+    for (int i = 0; i < 900; i++) {
+
+        this->review[i] = ' ';
+
+    }
+
     this->upVotes = 0;
+
     this->appVersion = "";
+
     this->postDate = "";
+
 }
 
 TikTokData::~TikTokData() {
 
 }
 
-void TikTokData::setId(char id) {
-    this->id = id;
+void TikTokData::setId(char[] idi) {
+
+    for(int i = 0; i < 86; i++) {
+
+        this->id[i] = idi[i];
+
+    }
+
 }
 
-void TikTokData::setReview(std::string review) {
+void TikTokData::setReview(char[] review) {
     this->review = review;
 }
 

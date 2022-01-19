@@ -11,8 +11,8 @@ class TikTokData {
         ~TikTokData();
 
         ///as funções Set dos dados
-        void setId(char id);
-        void setReview(std::string review);
+        void setId(char idi[]);
+        void setReview(char review[]);
         void setUpVotes(int upVotes);
         void setAppVersion(std::string appVersion);
         void setPostDate(std::string postDate);
@@ -28,8 +28,8 @@ class TikTokData {
 
     private:
         ///os dados do arquivo .csv e o tipo de cada variável
-        char id;
-        std::string review;
+        char id[86];
+        char review[900];
         int upVotes;
         std::string appVersion;
         std::string postDate;

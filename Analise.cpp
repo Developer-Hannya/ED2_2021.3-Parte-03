@@ -62,12 +62,12 @@ void Analise::insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BT
 
     for(int it = 0;it != registrosimportados.size();it++) {
 
-        VP.insertId(registrosimportados.at(it).getId());
+        VP.insertId(*registrosimportados.at(it).getId());
     }
 
     for(int it = 0;it != registrosimportados.size();it++) {
 
-        VP.insertId(registrosimportados[it].getId());
+        VP.insertId(*registrosimportados[it].getId());
 
     }
 
@@ -79,13 +79,13 @@ void Analise::insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BT
 
     for(int it = 0; it != registrosimportados.size(); it++) {
 
-        AVL.insertId(AVL.maxDegree, registrosimportados.at(it).getId());
+        AVL.insertId(AVL.maxDegree, *registrosimportados.at(it).getId());
 
     }
 
     for(int it = 0;it != registrosimportados.size(); it++) {
 
-        AVL.insertId(AVL.maxDegree, registrosimportados.at(it).getId());
+        AVL.insertId(AVL.maxDegree, *registrosimportados.at(it).getId());
 
     }
 
@@ -110,13 +110,13 @@ void Analise::busca(int B, RedBlackTree VP, BTree AVL, vector<TikTokData> regist
 
     for(int i = 0;i < B;i++) {
 
-        VP.searchId(VP.root, registrosimportados.at(ale).getId());
+        VP.searchId(VP.root, *registrosimportados.at(ale).getId());
 
     }
 
     for(int i = 0;i < B;i++) {
 
-        VP.searchId(VP.root, registrosimportados.at(ale).getId());
+        VP.searchId(VP.root, *registrosimportados.at(ale).getId());
 
     }
 
@@ -128,13 +128,13 @@ void Analise::busca(int B, RedBlackTree VP, BTree AVL, vector<TikTokData> regist
 
     for(int i = 0;i < B;i++) {
 
-        AVL.callSearch(registrosimportados.at(ale).getId());
+        AVL.callSearch(*registrosimportados.at(ale).getId());
 
     }
 
     for(int i = 0;i < B;i++) {
 
-        AVL.callSearch(registrosimportados.at(ale).getId());
+        AVL.callSearch(*registrosimportados.at(ale).getId());
 
     }
 

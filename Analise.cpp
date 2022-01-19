@@ -99,7 +99,7 @@ void Analise::busca(int B, RedBlackTree VP, BTree AVL, vector<TikTokData> regist
 
     clock_t start,end;
 
-    double time = double(end - start);
+    double t = double(end - start);
 
     srand(time(NULL));
 
@@ -115,7 +115,7 @@ void Analise::busca(int B, RedBlackTree VP, BTree AVL, vector<TikTokData> regist
 
     for(int i = 0;i < B;i++) {
 
-        VP.searchId(VP.root, registrosimportados.at(ale));
+        VP.searchId(VP.root, registrosimportados.at(ale).getId());
 
     }
 
@@ -133,7 +133,7 @@ void Analise::busca(int B, RedBlackTree VP, BTree AVL, vector<TikTokData> regist
 
     for(int i = 0;i < B;i++) {
 
-        AVL.callSearch(registrosimportados.at(ale));
+        AVL.callSearch(registrosimportados.at(ale).getId());
 
     }
 

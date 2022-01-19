@@ -55,7 +55,7 @@
 	<iomanip>
 	"TikTokData.h"
 
-1642627368 c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.h
+1642628610 c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.h
 	<string>
 	<vector>
 
@@ -85,7 +85,7 @@
 	"NodeRedBlackTree.h"
 	<iostream>
 
-1642625387 source:c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.cpp
+1642628372 source:c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.cpp
 	<string>
 	<iostream>
 	"TikTokData.h"

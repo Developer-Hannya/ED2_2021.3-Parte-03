@@ -50,8 +50,6 @@ std::vector<TikTokData> FileReader::readTikTok(std::string tikTokFile) {
 
                 getline(dataFromLine, postDate, ',');
 
-                //idi = id;
-
                 TikTokData element;
 
                 element.setInfo(id, review, atoi(upVotes.c_str()), appVersion, postDate);

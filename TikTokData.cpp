@@ -3,6 +3,7 @@
 #include "TikTokData.h"
 
 TikTokData::TikTokData() {
+
     for (int i = 0; i < 86; i++) {
 
         this->id[i] = ' ';
@@ -58,7 +59,7 @@ void TikTokData::setPostDate(std::string postDate) {
     this->postDate = postDate;
 }
 
-void TikTokData::setInfo(char id[], std::string review, int upVotes, std::string appVersion, std::string postDate) {
+void TikTokData::setInfo(char id[], char review[], int upVotes, std::string appVersion, std::string postDate) {
     setId(id);
     setReview(review);
     setUpVotes(upVotes);
@@ -71,7 +72,7 @@ char TikTokData::getId() {
     return this->id;
 }
 
-std::string TikTokData::getReview() {
+char TikTokData::getReview() {
     return this->review;
 }
 

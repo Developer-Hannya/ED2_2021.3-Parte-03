@@ -5,17 +5,21 @@
 #include <vector>
 
 #include "TikTokData.h"
+#include "RedBlackTree.h"
+#include "BTree.h"
 
 class Analise
 {
 private:
-    
+
 public:
     Analise();
 
-    vector<TikTokData> importacao(int N);
-    void insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BTree AVL);
-    void busca(int B,RedBlackTree VP,BTree AVL,vector<TikTokData> registrosimportados);
+    std::vector<TikTokData> importacao(int N);
+
+    void insercao(std::vector<TikTokData> registrosimportados, RedBlackTree VP,BTree AVL);
+
+    void busca(int B,RedBlackTree VP, BTree AVL, std::vector<TikTokData> registrosimportados);
 };
 
 #endif

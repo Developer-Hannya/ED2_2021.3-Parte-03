@@ -39,10 +39,10 @@
 
 1641390966 c:\users\bernardo\ed2_2021.3-parte-03\ed2_2021.3-parte-03\redblacktree.h
 
-1642621848 source:c:\users\bernardo\ed2_2021.3-parte-03\filereader.cpp
+1642635610 source:c:\users\bernardo\ed2_2021.3-parte-03\filereader.cpp
 	"FileReader.h"
 
-1642621848 c:\users\bernardo\ed2_2021.3-parte-03\filereader.h
+1642633095 c:\users\bernardo\ed2_2021.3-parte-03\filereader.h
 	<fstream>
 	<sstream>
 	<string>

@@ -5,6 +5,7 @@
 #include "TikTokData.h"
 #include "moduloteste.h"
 #include "Analise.h"
+#include "FileReader.h"
 
 #include <iostream>
 #include <stdlib.h>
@@ -33,6 +34,10 @@ int main()
     string linha;
 
     int i, n, a, id;
+
+    FileReader c;
+
+    Analise q;
 
     cout << "[1] a'rvore vermelho-preto" << endl << "[2] a'rvore B" << endl << "[3] sair"<< endl;
 

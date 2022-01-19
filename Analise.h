@@ -5,8 +5,8 @@
 #include <vector>
 
 #include "TikTokData.h"
-#include "RedBlackTree.h"
 #include "BTree.h"
+#include "RedBlackTree.h"
 
 class Analise
 {

@@ -1,25 +1,16 @@
-#ifndef Analise_H_INCLUDED
-#define Analise_H_INCLUDED
+#ifndef moduloteste_H_INCLUDED
+#define moduloteste_H_INCLUDED
 
-#include <iostream>
-#include <vector>
 
-#include "TikTokData.h"
-#include "BTree.h"
-#include "RedBlackTree.h"
-
-class Analise
+class moduloteste
 {
-private:
+    public:
+       moduloteste();
+       ~moduloteste();
 
-public:
-    Analise();
+       void acessaRegistro(int i);
+       void testeImportacao();
 
-    std::vector<TikTokData> importacao(int N,vector<TikTokData> data);
-
-    void insercao(std::vector<TikTokData> registrosimportados, RedBlackTree VP,BTree AVL);
-
-    void busca(int B,RedBlackTree VP, BTree AVL, std::vector<TikTokData> registrosimportados);
 };
 
 #endif

@@ -44,7 +44,7 @@ void BTree::insertId(int n, char id) {
 
     else {
 
-        if (root->nKeys == 2*maxDegree-1) {
+        if (root->nKeys == 2 * maxDegree - 1) {
 
             NodeBTree *s = new NodeBTree(maxDegree, false);
 

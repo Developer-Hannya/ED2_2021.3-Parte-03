@@ -11,7 +11,7 @@ class TikTokData {
         ~TikTokData();
 
         ///as funções Set dos dados
-        void setId(std::string id);
+        void setId(char id);
         void setReview(std::string review);
         void setUpVotes(int upVotes);
         void setAppVersion(std::string appVersion);
@@ -19,7 +19,7 @@ class TikTokData {
         void setInfo(std::string id, std::string review, int upVotes, std::string appVersion, std::string postDate);
 
         ///as funções Get dos dados
-        std::string getId();
+        char getId();
         std::string getReview();
         int getUpVotes();
         std::string getAppVersion();

@@ -252,7 +252,7 @@ void RedBlackTree::insertId(char data) {
 
 }
 
-NodeRedBlackTree *NodeRedBlackTree::searchId(NodeRedBlackTree *node, char id) {
+NodeRedBlackTree *RedBlackTree::searchId(NodeRedBlackTree *node, char id) {
 
     if (node == nullptr || node->id == id) {
 

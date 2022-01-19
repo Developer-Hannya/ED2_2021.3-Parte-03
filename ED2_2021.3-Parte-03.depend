@@ -91,12 +91,32 @@
 	"NodeBTree.h"
 	<iostream>
 
-1642578255 c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.h
+1642582207 c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.h
 
 1642578268 source:c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.cpp
 	"NodeRedBlackTree.h"
 	<iostream>
 
-1642578281 source:c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.cpp
+1642582227 source:c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.cpp
 	"RedBlackTree.h"
+
+1640196672 source:c:\users\bernardo\ed2_2021.3-parte-03\moduloteste.cpp
+	<iostream>
+	<fstream>
+	<time.h>
+	"moduloteste.h"
+
+1640115348 c:\users\bernardo\ed2_2021.3-parte-03\moduloteste.h
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<process.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<string>
+	<vector>
+	"TikTokData.h"
 

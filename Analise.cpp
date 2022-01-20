@@ -53,18 +53,18 @@ oid Analise::insercao(BTree B,RedBlackTree RB,vector<TikTokData> importados)
     double time = double(end - start);
 
     start = clock();
-    for(int it = 0;it != registrosimportados.size();it++)
+    for(int it = 0;it != importados.size();it++)
     {
-        B.insertId(registrosimportados.at(it));
+        B.insertId(importados.at(it));
     }
     end = clock();
 
     cout << "tempo de B : " << time << " segundos" << endl;
 
     start = clock();
-    for(vector<TikTokData>::iterator it = registrosimportados.begin();it != registrosimportados.end();it++)
+    for(vector<TikTokData>::iterator it = importados.begin();it != importados.end();it++)
     {
-        RB.insert(registrosimportados.at(it).getId());
+        RB.insert(importados.at(it).getId());
     }
     end = clock();
 
@@ -72,19 +72,19 @@ oid Analise::insercao(BTree B,RedBlackTree RB,vector<TikTokData> importados)
 }
 
 
-void Analise::busca(int C,BTree B,RedBlackTree RB)
+void Analise::busca(int C,BTree B,RedBlackTree RB,vector<TikTokData> importados)
 {
     int ale;
     clock_t start,end;
     double t = double(end - start);
 
     srand(time(NULL));
-    ale = rand() % registrosimportados.size();
+    ale = rand() % importados.size();
 
     start = clock();
     for(int i = 0;i < C;i++)
     {
-        B.search(registrosimportados.at(ale));
+        B.search(importados.at(ale));
     }
     end = clock();
 
@@ -93,7 +93,7 @@ void Analise::busca(int C,BTree B,RedBlackTree RB)
     start = clock();
     for(int i = 0;i < C;i++)
     {
-        RB.search(registrosimportados.at(ale));
+        RB.search(importados.at(ale));
     }
     end = clock();
 

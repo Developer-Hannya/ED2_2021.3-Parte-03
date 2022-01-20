@@ -5,6 +5,7 @@
 #include <stdio.h> 
 #include <stdlib.h>
 
+
 #include "Analise.h"
 #include "TikTokData.h"
 
@@ -12,11 +13,12 @@ using namespace std;
 
 Analise::Analise()
 {
+
 }
 
 vector<TikTokData> Analise::importacao(int N)
 {
-    int count = 0,ale;
+    int count = 0, ale;
     vector<TikTokData> registro;
     ifstream r;
 
@@ -27,6 +29,7 @@ vector<TikTokData> Analise::importacao(int N)
         cout << "ERRO:Nao foi possivel abrir o arquivo." << endl;
         return exit(EXIT_FAILURE);
     }
+
 
     while(count < N)
     {
@@ -50,47 +53,91 @@ void Analise::insercao(BTree B,RedBlackTree RB,vector<TikTokData> importados)
     double time = double(end - start);
 
     start = clock();
+
     for(int it = 0;it != registrosimportados.size();it++)
     {
         B.insertId(registrosimportados.at(it));
     }
+
+    for(int it = 0;it != registrosimportados.size();it++) {
+
+        VP.insertId(*registrosimportados.at(it).getId());
+    }
+
+    for(int it = 0;it != registrosimportados.size();it++) {
+
+        VP.insertId(*registrosimportados[it].getId());
+
+    }
+  
     end = clock();
 
     cout << "tempo de B : " << time << " segundos" << endl;
 
     start = clock();
+
     for(vector<TikTokData>::iterator it = registrosimportados.begin();it != registrosimportados.end();it++)
     {
         RB.insert(registrosimportados.at(it).getId());
+
+    for(int it = 0; it != registrosimportados.size(); it++) {
+
+        AVL.insertId(AVL.maxDegree, *registrosimportados.at(it).getId());
+
+    }
+
+    for(int it = 0;it != registrosimportados.size(); it++) {
+
+        AVL.insertId(AVL.maxDegree, *registrosimportados.at(it).getId());
+
     }
     end = clock();
 
     cout << "tempo de RB : " << time << " segundos" << endl;
 }
 
+
 void Analise::busca(int C,BTree B,RedBlackTree RB)
 {
     int ale;
     clock_t start,end;
+  
     double t = double(end - start);
 
     srand(time(NULL));
     ale = rand() % registrosimportados.size();
 
     start = clock();
+
     for(int i = 0;i < C;i++)
     {
         B.search(registrosimportados.at(ale));
     }
+  
     end = clock();
 
     cout << "tempo de busca B : " << t << " segundos" << endl;
 
     start = clock();
+
     for(int i = 0;i < C;i++)
     {
         RB.search(registrosimportados.at(ale));
     }
+
+
+    for(int i = 0;i < B;i++) {
+
+        AVL.callSearch(*registrosimportados.at(ale).getId());
+
+    }
+
+    for(int i = 0;i < B;i++) {
+
+        AVL.callSearch(*registrosimportados.at(ale).getId());
+
+    }
+
     end = clock();
 
     cout << "tempo de busca RB : " << t << " segundos" << endl;

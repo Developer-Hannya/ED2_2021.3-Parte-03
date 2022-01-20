@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1642644640 source:c:\users\bernardo\ed2_2021.3-parte-03\main.cpp
+	"BTree.h"
+	"RedBlackTree.h"
+	"NodeBTree.h"
+	"NodeRedBlackTree.h"
+	"TikTokData.h"
+	"moduloteste.h"
+	"Analise.h"
+	"FileReader.h"
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<fstream>
+
+1642644640 c:\users\bernardo\ed2_2021.3-parte-03\btree.h
+	<string>
+	"NodeBTree.h"
+
+1642644640 c:\users\bernardo\ed2_2021.3-parte-03\nodebtree.h
+	<iostream>
+	<vector>
+	<string>
+
+1642644640 c:\users\bernardo\ed2_2021.3-parte-03\redblacktree.h
+	"NodeRedBlackTree.h"
+	<iostream>
+
+1642644640 c:\users\bernardo\ed2_2021.3-parte-03\noderedblacktree.h
+
+1642644640 c:\users\bernardo\ed2_2021.3-parte-03\tiktokdata.h
+	<string>
+	<vector>
+
+1642644640 c:\users\bernardo\ed2_2021.3-parte-03\moduloteste.h
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<process.h>
+	<iostream>
+	<fstream>
+	<iomanip>
+	<string>
+	<vector>
+	"TikTokData.h"
+
+1642645823 c:\users\bernardo\ed2_2021.3-parte-03\analise.h
+	<vector>
+	"RedBlackTree.h"
+	"BTree.h"
+	"TikTokData.h"
+
+1642644640 c:\users\bernardo\ed2_2021.3-parte-03\filereader.h
+	<fstream>
+	<sstream>
+	<string>
+	<vector>
+	<iostream>
+	<stdlib.h>
+	<stdio.h>
+	<windows.h>
+	<process.h>
+	<iomanip>
+	"TikTokData.h"
+

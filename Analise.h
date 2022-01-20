@@ -14,22 +14,12 @@ private:
     
 public:
   
-    void acessaRegistro(int i);
-  
     Analise();
 
     vector<TikTokData> importacao(int N);
-    void insercao(BTree B,RedBlackTree RB);
-    void busca(int C,BTree B,RedBlackTree RB);
+    void insercao(BTree B,RedBlackTree RB,vector<TikTokData> importados);
+    void busca(int C,BTree B,RedBlackTree RB,vector<TikTokData> importados);
   
-    void testeImportacao();
-
-    vector<TikTokData> importacao(int N,vector<TikTokData> data);
-
-    void insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BTree AVL);
-
-    void busca(int B, RedBlackTree VP, BTree AVL, vector<TikTokData> registrosimportados);
-
 };
 
 #endif

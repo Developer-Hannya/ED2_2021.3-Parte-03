@@ -2,11 +2,11 @@
 #include <fstream>
 #include <time.h>
 #include <vector>
+#include <stdio.h> 
+#include <stdlib.h>
 
 #include "Analise.h"
 #include "TikTokData.h"
-#include "BTree.h"
-#include "RedBlackTree.h"
 
 using namespace std;
 
@@ -14,122 +14,84 @@ Analise::Analise()
 {
 }
 
-vector<TikTokData> Analise::importacao(int N,vector<TikTokData> data)
+vector<TikTokData> Analise::importacao(int N)
 {
-    int counti = 0, ale;
-
+    int count = 0,ale;
     vector<TikTokData> registro;
-    ifstream fin;
+    ifstream r;
 
-    fin.open("data.bin",ios::binary);
+    r.open("data.bin",ios::binary);
 
-    if(!fin.is_open())
+    if(!r.is_open())
     {
         cout << "ERRO:Nao foi possivel abrir o arquivo." << endl;
+        return exit(EXIT_FAILURE);
     }
 
-    while(counti < N) {
+    while(count < N)
+    {
         srand(time(NULL));
-
         ale = rand() % 3500000;
-
         TikTokData registroB;
-
-        registroB.setInfo(data.at(ale).getId(), data.at(ale).getReview(), data.at(ale).getUpVotes(), data.at(ale).getAppVersion(), data.at(ale).getPostDate());
+        r.read((char*) &registroB,ale*sizeof(TikTokData));
 
         registro.push_back(registroB);
 
-        counti++;
+        count++;
     }
-
-    fin.close();
+    r.close();
 
     return registro;
 }
 
-void Analise::insercao(vector<TikTokData> registrosimportados,RedBlackTree VP,BTree AVL) {
+void Analise::insercao(BTree B,RedBlackTree RB,vector<TikTokData> importados)
+{
     clock_t start,end;
-
     double time = double(end - start);
 
     start = clock();
-
-    for(int it = registrosimportados.begin();it != registrosimportados.end();it++)
+    for(int it = 0;it != registrosimportados.size();it++)
     {
-        VP.insertId(registrosimportados.at(it).getId());
+        B.insertId(registrosimportados.at(it));
     }
-
-    for(int it = registrosimportados.begin();it != registrosimportados.end(); it++) {
-
-        VP.insert(registrosimportados.at(it));
-
-    }
-
     end = clock();
 
-    cout << "tempo da arvore VermelhoPreto : " << time << " segundos" << endl;
+    cout << "tempo de B : " << time << " segundos" << endl;
 
     start = clock();
-
-    for(int it = registrosimportados.begin();it != registrosimportados.end();it++)
+    for(vector<TikTokData>::iterator it = registrosimportados.begin();it != registrosimportados.end();it++)
     {
-        AVL.insertId(registrosimportados.at(it).getId());
+        RB.insert(registrosimportados.at(it).getId());
     }
-
-    for(int it = registrosimportados.begin();it != registrosimportados.end();it++) {
-
-        AVL.insert(registrosimportados.at(it).getId());
-
-    }
-
     end = clock();
 
-    cout << "tempo da arvore B : " << time << " segundos" << endl;
+    cout << "tempo de RB : " << time << " segundos" << endl;
 }
 
-void Analise::busca(int B,RedBlackTree VP,BTree AVL,vector<TikTokData> registrosimportados) {
-
+void Analise::busca(int C,BTree B,RedBlackTree RB)
+{
     int ale;
-
     clock_t start,end;
-
-    double time = double(end - start);
+    double t = double(end - start);
 
     srand(time(NULL));
-
     ale = rand() % registrosimportados.size();
 
     start = clock();
-
-    for(int i = 0;i < B;i++)
+    for(int i = 0;i < C;i++)
     {
-        VP.callSearch(registrosimportados.at(ale).getId());
+        B.search(registrosimportados.at(ale));
     }
-
-    for(int i = 0;i < B;i++) {
-
-        VP.search(registrosimportados.at(ale));
-    
-    }
-
     end = clock();
 
-    cout << "tempo da arvore VermelhoPreto : " << time << " segundos" << endl;
+    cout << "tempo de busca B : " << t << " segundos" << endl;
 
     start = clock();
-
-    for(int i = 0;i < B;i++)
+    for(int i = 0;i < C;i++)
     {
-        AVL.searchId(registrosimportados.at(ale).getId());
+        RB.search(registrosimportados.at(ale));
     }
-
-    for(int i = 0;i < B;i++) {
-
-        AVL.search(registrosimportados.at(ale));
-
-    }
-
     end = clock();
 
-    cout << "tempo da arvore B : " << time << " segundos" << endl;
+    cout << "tempo de busca RB : " << t << " segundos" << endl;
 }

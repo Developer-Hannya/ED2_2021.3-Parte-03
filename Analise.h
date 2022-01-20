@@ -11,15 +11,13 @@
 class Analise
 {
 private:
-
+    
 public:
     Analise();
 
-    std::vector<TikTokData> importacao(int N,vector<TikTokData> data);
-
-    void insercao(std::vector<TikTokData> registrosimportados, RedBlackTree VP,BTree AVL);
-
-    void busca(int B,RedBlackTree VP, BTree AVL, std::vector<TikTokData> registrosimportados);
+    vector<TikTokData> importacao(int N);
+    void insercao(BTree B,RedBlackTree RB);
+    void busca(int C,BTree B,RedBlackTree RB);
 };
 
 #endif
